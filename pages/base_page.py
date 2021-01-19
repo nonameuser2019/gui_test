@@ -5,6 +5,7 @@ from selenium.common.exceptions import TimeoutException
 from selenium.common.exceptions import NoAlertPresentException
 from selenium.webdriver.support import expected_conditions as EC
 import math
+from .locators import MainPageLocators
 
 
 class BasePage():
@@ -15,12 +16,14 @@ class BasePage():
 
     def is_element_present(self, how, what):
         try:
-            self.browser.find_elements(how, what)
-        except (NoSuchElementException):
+            self.browser.find_element(how, what)
+        except(NoSuchElementException):
             return False
         return True
 
     def open(self):
         self.browser.get(self.url)
 
-
+    def move_to_element(self):
+        element = self.browser.find_element(*MainPageLocators.CUSTOMERS_LINK)
+        webdriver.ActionChains(self.browser).move_to_element(element).perform()
