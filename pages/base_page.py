@@ -19,6 +19,8 @@ class BasePage():
             self.browser.find_element(how, what)
         except(NoSuchElementException):
             return False
+        except:
+            return False
         return True
 
     def open(self):

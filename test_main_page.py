@@ -98,7 +98,7 @@ def test_should_be_link_bag(browser):
     assert page.is_element_present(*MainPageLocators.LINK_BAG_HEADER)
 
 
-#проверка наличия иконки корзины покупок
+# проверка наличия иконки корзины покупок
 def test_should_be_image_shopping_cart(browser):
     page = MainPage(browser, MainPageLocators.MAIN_PAGE_URL)
     page.open()
@@ -141,11 +141,142 @@ def test_check_subtitle_in_block_choice_auto(browser):
     page.should_by_subtitle_in_block_choice_auto(browser)
 
 
-@pytest.mark.test
-def test_should_be_block_actual_news(browser):
+# проверка наличия блока актуальные акции
+def test_should_be_block_actual_action(browser):
     page = MainPage(browser, MainPageLocators.MAIN_PAGE_URL)
     page.open()
-    assert page.is_element_present(*MainPageLocators.BLOCK_ACTUAL_NEWS)
+    assert page.is_element_present(*MainPageLocators.BLOCK_ACTUAL_ACTIONS)
+
+
+# проверка тайтла блока актуальные акции
+def test_check_title_in_block_actual_action(browser):
+    page = MainPage(browser, MainPageLocators.MAIN_PAGE_URL)
+    page.open()
+    page.should_be_title_block_actual_action(browser)
+
+
+# проверка ссылки к списку всех акций
+def test_check_link_to_all_actions_block_actual_actions(browser):
+    page = MainPage(browser, MainPageLocators.MAIN_PAGE_URL)
+    page.open()
+    page.should_be_link_to_list_all_news_block_actual_action(browser)
+
+
+# проверка наличия блока каталог товаров
+def test_should_be_block_catalog_of_goods(browser):
+    page = MainPage(browser, MainPageLocators.MAIN_PAGE_URL)
+    page.open()
+    assert page.is_element_present(*MainPageLocators.BLOCK_CATALOG_OF_GOODS)
+
+# проверка наличия блока популярные услуги
+def test_should_be_block_popular_services(browser):
+    page = MainPage(browser, MainPageLocators.MAIN_PAGE_URL)
+    page.open()
+    assert page.is_element_present(*MainPageLocators.BLOCK_POPULAR_SERVICES)
+
+
+# проверка тайтла блока популярные услуги
+def test_check_title_in_block_popular_services(browser):
+    page = MainPage(browser, MainPageLocators.MAIN_PAGE_URL)
+    page.open()
+    page.should_be_title_in_block_popular_services(browser)
+
+
+@pytest.mark.xfail
+# проверка ссылки к списку всех услуг
+def test_check_link_to_list_all_services_in_block_popular_services(browser):
+    page = MainPage(browser, MainPageLocators.MAIN_PAGE_URL)
+    page.open()
+    page.should_be_link_to_all_services_block_popular_services()
+
+
+# Проверка наличия блока подписаться на нас
+def test_should_be_block_subscribe(browser):
+    page = MainPage(browser, MainPageLocators.MAIN_PAGE_URL)
+    page.open()
+    assert page.is_element_present(*MainPageLocators.BLOCK_SUBSCRIBE)
+
+
+# Првоерка наличия текстового поля в блоке подписатьтся на нас
+def test_should_be_text_inp_in_block_subscribe(browser):
+    page = MainPage(browser, MainPageLocators.MAIN_PAGE_URL)
+    page.open()
+    assert page.is_element_present(*MainPageLocators.TEXT_INPUT_SUBSCRIBE)
+
+
+# проверка наличия кнопка подписаться в блоке подписаться на нас
+def test_should_be_button_subscribe_in_block_subscribe(browser):
+    page = MainPage(browser, MainPageLocators.MAIN_PAGE_URL)
+    page.open()
+    assert page.is_element_present(*MainPageLocators.BUTTON_SUBSCRIBE)
+
+
+# проверка наличия блока отзывы клиентов
+def test_should_be_block_feedback(browser):
+    page = MainPage(browser, MainPageLocators.MAIN_PAGE_URL)
+    page.open()
+    assert page.is_element_present(*MainPageLocators.BLOCK_FEEDBACK)
+
+
+# проверка тайтл блока отзывы клиентов
+def test_check_title_block_feedback(browser):
+    page = MainPage(browser, MainPageLocators.MAIN_PAGE_URL)
+    page.open()
+    page.should_be_title_block_feedback(browser)
+
+
+# проверка сслки к списку все отзывов
+def test_check_link_to_all_feedbacs(browser):
+    page = MainPage(browser, MainPageLocators.MAIN_PAGE_URL)
+    page.open()
+    page.should_be_link_to_all_feedbacks(browser)
+
+
+# проверка наличия блока полезные статьи
+def test_should_be_block_useful_articles(browser):
+    page = MainPage(browser, MainPageLocators.MAIN_PAGE_URL)
+    page.open()
+    assert page.is_element_present(*MainPageLocators.BLOCK_USEFUL_ARTICLES)
+
+
+# Прверка тайтла блока полезные статьи
+def test_check_title_block_useful_articles(browser):
+    page = MainPage(browser, MainPageLocators.MAIN_PAGE_URL)
+    page.open()
+    page.should_be_title_block_useful_articles(browser)
+
+
+# проверка ссылки к списку всех новостей
+def test_check_link_to_all_articles_block_useful_articles(browser):
+    page = MainPage(browser, MainPageLocators.MAIN_PAGE_URL)
+    page.open()
+    page.should_be_link_to_all_articles(browser)
+
+
+# проверка наличия блока о компании(мастер сервис разборка)
+def test_should_be_block_about_company(browser):
+    page = MainPage(browser, MainPageLocators.MAIN_PAGE_URL)
+    page.open()
+    assert page.is_element_present(*MainPageLocators.BLOCK_ABOUT_US)
+
+
+# проверка наличия блока контактов в футер
+def test_should_be_block_cotacts_footer(browser):
+    page = MainPage(browser, MainPageLocators.MAIN_PAGE_URL)
+    page.open()
+    assert page.is_element_present(*MainPageLocators.BLOCK_FOOTER_CONTACTS)
+
+
+@pytest.mark.test
+# проверка наличия логотипа компания в футер
+def test_should_be_logo_in_footer(browser):
+    page = MainPage(browser, MainPageLocators.MAIN_PAGE_URL)
+    page.open()
+    assert page.is_element_present(*MainPageLocators.FOOTER_LOGO)
+
+
+
+
 
 
 
