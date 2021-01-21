@@ -6,6 +6,7 @@ from selenium.webdriver.chrome.options import Options
 def pytest_addoption(parser):
     parser.addoption('--browser_name', action='store', default='chrome',
                      help="Choose browser: chrome or firefox")
+    parser.addoption('--headless', action='store_true', help='enable headless mod for supported browsers.')
 
 
 @pytest.fixture
@@ -14,6 +15,7 @@ def browser(request):
     if browser_name == 'chrome':
         print(' \nStart browser chrome for test')
         options = Options()
+        #options.headless = True
         browser = webdriver.Chrome(options=options)
         browser.set_window_size(1920, 1080)
         browser.implicitly_wait(5)

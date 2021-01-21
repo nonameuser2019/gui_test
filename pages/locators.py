@@ -3,6 +3,10 @@ from selenium.webdriver.common.by import By
 
 class MainPageLocators():
     MAIN_PAGE_URL = 'https://qa.platform.masterservice.company/'
+    LINK_LIST_IN_HEADER_TOP = [(0, 'О нас'), (1, 'Покупателям'), (2, 'Сотрудничество'), (3, 'АвтоГид'),
+                                             (4, 'Акции'), (5, 'Контакты')]
+    LINK_LIST_DROPDOWN_HEADER = [(0, 'Отзывы о компании'), (1, 'Производители автозапчастей'), (2, 'Форум'),
+                                 (3, 'Доставка и оплата'), (4, 'Гарантия и возврат'), (5, 'Вопросы и ответы')]
     LEFT_HEADER_MENU_list = (By.CSS_SELECTOR, 'ul.header-desktop__nav>li')
     CUSTOMERS_LINK_LIST = (By.CSS_SELECTOR, '.dropdown__items>a')
     CUSTOMERS_LINK = (By.CSS_SELECTOR, 'ul.header-desktop__nav>li:nth-child(2)')
@@ -42,3 +46,20 @@ class MainPageLocators():
     BLOCK_ABOUT_US = (By.CSS_SELECTOR, '.about-container')
     BLOCK_FOOTER_CONTACTS = (By.CSS_SELECTOR, 'div.footer__block')
     FOOTER_LOGO = (By.CSS_SELECTOR, '.footer__logo')
+    FOOTER_SOCIAL_NETWORK_BLOCK = (By.CSS_SELECTOR, '.footer__row._container>div:nth-of-type(1)')
+    FOOTER_CONTACTS_BLOCK = (By.CSS_SELECTOR, '.footer__row._container>div:nth-of-type(2)')
+    FOOTER_SHEDULE_WORK_BLOCK = (By.CSS_SELECTOR, '.footer__row._container>div:nth-of-type(3)')
+    FOOTER_PAYS_METHOD_BLOCK = (By.CSS_SELECTOR, '.footer__row._container>div:nth-of-type(4)')
+    FOOTER_NAV_BLOCK = (By.CSS_SELECTOR, '.footer__nav._container')
+    FOOTER_NAV_INFORMATION_BLOCK_FIRST = (By.CSS_SELECTOR, '.footer__nav._container>nav:nth-child(1)')
+    FOOTER_NAV_INFORMATION_BLOCK_SECOND = (By.CSS_SELECTOR, '.footer__nav._container>nav:nth-child(2)')
+    FOOTER_NAV_GOODS_BLOCK = (By.CSS_SELECTOR, '.footer__nav._container>nav:nth-child(3)')
+    FOOTER_NAV_REPAIR_CAR_BLOCK = (By.CSS_SELECTOR, '.footer__nav._container>nav:nth-child(4)')
+    FOOTER_NAV_REPAIR_AGREGATE_BLOCK = (By.CSS_SELECTOR, '.footer__nav._container>nav:nth-child(5)')
+    FOOTER_COPYWRITE_BLOCK = (By.CSS_SELECTOR, '.footer__copyright')
+    FOOTER_FACEBOOK_ICON = (By.CSS_SELECTOR, '.item__links>a:nth-child(1)_')
+    FOOTER_YOUTUBE_ICON = (By.CSS_SELECTOR, '.item__links>a:nth-child(2)_')
+    FOOTER_INSTA_ICON = (By.CSS_SELECTOR, '.item__links>a:nth-child(3)_')
+
+
+

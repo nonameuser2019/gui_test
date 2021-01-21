@@ -12,7 +12,7 @@ class MainPage(BasePage):
             f'{browser.find_elements(*MainPageLocators.LEFT_HEADER_MENU_list)[0].text}'
 
     def should_by_link_in_customers_drop_down(self, browser: webdriver.Chrome, index, messages):
-        assert self.browser.find_elements(*MainPageLocators.CUSTOMERS_LINK_LIST[index].text) == messages, \
+        assert self.browser.find_elements(*MainPageLocators.CUSTOMERS_LINK_LIST)[index].text == messages, \
             f'Link: {messages} does not found in customers list in header left-top menu'
 
     def should_by_title_in_block_choice_auto(self, browser: webdriver.Chrome):
