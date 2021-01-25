@@ -26,6 +26,15 @@ class BasePage():
     def open(self):
         self.browser.get(self.url)
 
-    def move_to_element(self):
-        element = self.browser.find_element(*MainPageLocators.CUSTOMERS_LINK)
+    def move_to_element(self, how, what):
+        element = self.browser.find_element(how, what)
         webdriver.ActionChains(self.browser).move_to_element(element).perform()
+
+    def click_button(self, how, what):
+        button = self.browser.find_element(how, what)
+        button.click()
+
+    def check_title(self, how, what, title):
+        get_title = self.browser.find_element(how, what).text
+        assert get_title == title, 'Title incorrect'
+

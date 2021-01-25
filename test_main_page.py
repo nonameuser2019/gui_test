@@ -19,7 +19,7 @@ def test_check_all_link_in_header_top_menu(browser, index, messages):
 def test_check_all_link_in_customers_dropdown_menu(browser, index, messages):
     page = MainPage(browser, MainPageLocators.MAIN_PAGE_URL)
     page.open()
-    page.move_to_element()
+    page.move_to_element(*MainPageLocators.CUSTOMERS_LINK)
     page.should_by_link_in_customers_drop_down(browser, index, messages)
 
 

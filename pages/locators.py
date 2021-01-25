@@ -62,4 +62,28 @@ class MainPageLocators():
     FOOTER_INSTA_ICON = (By.CSS_SELECTOR, '.item__links>a:nth-child(3)_')
 
 
+class FormOfLoggin():
+
+    TEXT_INPUT_LOGIN = (By.CSS_SELECTOR, 'input[type="email"]')
+    TEXT_INPUT_PASSWORD = (By.CSS_SELECTOR, 'input[type=password]')
+    CHECK_REMEMBER_ME = (By.CSS_SELECTOR, '#remind')
+    BUTTON_LOGIN = (By.CSS_SELECTOR, '.auth__login-block>div>div.button__primary_default')
+
+
+class DiagnosticPageLocator():
+
+    TITLE_DIAGNOSTIC_TAB = (By.CSS_SELECTOR, '.tabs-block_type_diagnostic>div.modal-header-section>h3')
+    CHOICE_SYSTEM_LIST = (By.CSS_SELECTOR, 'div.node>div.node__content>div.node__content-item:nth-child(1)')
+    CHOICE_SYSTEM_ITEM = (By.CSS_SELECTOR, 'span[data-value="system1"]')
+    CHOICED_SYSTEM_TEXT = (By.CSS_SELECTOR, '.diagnostic-total-block__value')
+    CHOISE_COMPONENT_ITEM = (By.CSS_SELECTOR, 'span[data-value="Диагностика ходовой"]')
+    CHOICE_COMPONENT_LIST = (By.CSS_SELECTOR, 'div.node>div.node__content>div.node__content-item:nth-child(2)')
+    DIAGNOSTIC_BUTTON = (By.CSS_SELECTOR, '.diagnostic__button-container')
+    DATE_TIME_TITLE = (By.CSS_SELECTOR, 'div.title-block>span:nth-child(1)')
+    CALENDAR_DAY = (By.CSS_SELECTOR, '.calendar__day-wrapper>div.calendar__day-container>span')
+
+
+
+
+
 
