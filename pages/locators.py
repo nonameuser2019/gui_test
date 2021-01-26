@@ -79,8 +79,10 @@ class DiagnosticPageLocator():
     CHOISE_COMPONENT_ITEM = (By.CSS_SELECTOR, 'span[data-value="Диагностика ходовой"]')
     CHOICE_COMPONENT_LIST = (By.CSS_SELECTOR, 'div.node>div.node__content>div.node__content-item:nth-child(2)')
     DIAGNOSTIC_BUTTON = (By.CSS_SELECTOR, '.diagnostic__button-container')
-    DATE_TIME_TITLE = (By.CSS_SELECTOR, 'div.title-block>span:nth-child(1)')
+    SUB_TITLE_DIAGNOSTIC = (By.CSS_SELECTOR, 'div.title-block>span:nth-child(1)')
     CALENDAR_DAY = (By.CSS_SELECTOR, '.calendar__day-wrapper>div.calendar__day-container>span')
+    DIAGNOSTIC_BUTTON_DATE = (By.CSS_SELECTOR, 'div.diagnostic__button-container>div.button__primary_default')
+
 
 
 
