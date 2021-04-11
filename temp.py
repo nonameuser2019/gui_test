@@ -15,5 +15,8 @@ from datetime import date
 #     print(button)
 #
 # temp()
-current_date = date.today()
-print(current_date.strftime('%d'))
+def is_even(number):
+    return number % 2 == 0
+
+num = 5
+print(is_even(num))

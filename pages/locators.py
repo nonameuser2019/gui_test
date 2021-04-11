@@ -2,25 +2,25 @@ from selenium.webdriver.common.by import By
 
 
 class MainPageLocators():
-    MAIN_PAGE_URL = 'https://qa.platform.masterservice.company/'
+    MAIN_PAGE_URL = 'https://qa.platform.masterservice.company/ru/'
     LINK_LIST_IN_HEADER_TOP = [(0, 'О нас'), (1, 'Покупателям'), (2, 'Сотрудничество'), (3, 'АвтоГид'),
                                              (4, 'Акции'), (5, 'Контакты')]
     LINK_LIST_DROPDOWN_HEADER = [(0, 'Отзывы о компании'), (1, 'Производители автозапчастей'), (2, 'Форум'),
                                  (3, 'Доставка и оплата'), (4, 'Гарантия и возврат'), (5, 'Вопросы и ответы')]
-    LEFT_HEADER_MENU_list = (By.CSS_SELECTOR, 'ul.header-desktop__nav>li')
+    LEFT_HEADER_MENU_list = (By.CSS_SELECTOR, 'ul.header__nav>li>a')
     CUSTOMERS_LINK_LIST = (By.CSS_SELECTOR, '.dropdown__items>a')
-    CUSTOMERS_LINK = (By.CSS_SELECTOR, 'ul.header-desktop__nav>li:nth-child(2)')
-    DROPDOWN_CHANGE_CURRENCY = (By.CSS_SELECTOR, '.header-desktop__dropdowns-group>span:nth-child(1)')
-    DROPDOWN_CHANGE_LANGUAGE = (By.CSS_SELECTOR, '.header-desktop__dropdowns-group>span:nth-child(2)')
-    LINK_PERSONAL_ACCOUNT = (By.CSS_SELECTOR, 'a.header-desktop__nav-link.auth-btn')
+    CUSTOMERS_LINK = (By.CSS_SELECTOR, 'ul.header__nav>li:nth-child(2)')
+    DROPDOWN_CHANGE_CURRENCY = (By.CSS_SELECTOR, '.header__dropdowns-group>div:nth-child(2)')
+    DROPDOWN_CHANGE_LANGUAGE = (By.CSS_SELECTOR, '.header__dropdowns-group>div:nth-child(1)')
+    LINK_PERSONAL_ACCOUNT = (By.CSS_SELECTOR, 'button.header__nav-link')
     LOGO_MAIN_PAGE = (By.CSS_SELECTOR, '.contacts__logo')
     DROPDOWN_CHANGE_CITY = (By.CSS_SELECTOR, 'div.contacts__city')
     BLOCK_PHONES_HEADER = (By.CSS_SELECTOR, '.contacts__phone')
-    SEARCH_FIELD_HEADER = (By.CSS_SELECTOR, 'div.contacts__search>div.form__block')
+    SEARCH_FIELD_HEADER = (By.CSS_SELECTOR, 'div.contacts__search>form.form__block')
     BUTTON_TO_DIAGNOSTIC = (By.CSS_SELECTOR, '.contacts__button.button__primary_default')
-    LINK_COMPAIRSON_HEADER = (By.CSS_SELECTOR, 'ul.menu-block__list._right>li:nth-child(1)')
-    LINK_FAFORITES_HEADER = (By.CSS_SELECTOR, 'ul.menu-block__list._right>li:nth-child(2)')
-    LINK_BAG_HEADER = (By.CSS_SELECTOR, 'ul.menu-block__list._right>li:nth-child(3)')
+    LINK_COMPAIRSON_HEADER = (By.CSS_SELECTOR, 'ul.menu-block__list.menu-block__list_right>a:nth-child(1)')
+    LINK_FAFORITES_HEADER = (By.CSS_SELECTOR, 'ul.menu-block__list.menu-block__list_right>a:nth-child(2)')
+    LINK_BAG_HEADER = (By.CSS_SELECTOR, 'div.cart-btn__container')
     IMAGE_SHOPPING_CART = (By.CSS_SELECTOR, 'div.cart-btn__container>i.ms-icon-shopping-cart')
     BLOCK_CAROUSEL = (By.CSS_SELECTOR, 'div.VueCarousel.main-slider__block')
     BLOCK_BANNER_IN_CAROUSEL = (By.CSS_SELECTOR, 'div.banner')
@@ -28,12 +28,12 @@ class MainPageLocators():
     TITLE_BLOCK_CHOICE_CAR = (By.CSS_SELECTOR, '.header-block__title.text_header_s.text_700.text_uppercase')
     SUBTITLE_BLOCK_CHOICE_CAR = (By.CSS_SELECTOR, '.header-block__subtitle')
     BLOCK_ACTUAL_ACTIONS = (By.CSS_SELECTOR, '#main-page>div._container>section:nth-child(4)')
-    TITLE_BLOCK_ACTUAL_ACTIONS = (By.CSS_SELECTOR, '#main-page>div._container>section:nth-child(4)>div>div>h1')
-    LINK_TO_ALL_NEWS_BLOCK_ACTUAL_ACTIONS = (By.CSS_SELECTOR, '#main-page>div._container>section:nth-child(4)>div>div>a')
+    TITLE_BLOCK_ACTUAL_ACTIONS = (By.CSS_SELECTOR, '#car-catalog-trigger>div>div>h2')
+    LINK_TO_ALL_NEWS_BLOCK_ACTUAL_ACTIONS = (By.CSS_SELECTOR, '#car-catalog-trigger>div>div>a')
     BLOCK_CATALOG_OF_GOODS = (By.CSS_SELECTOR, '.tabs-block.tabs-block_type_main-catalog')
-    BLOCK_POPULAR_SERVICES = (By.CSS_SELECTOR, '#main-page>div._container>section:nth-child(6)')
-    TITLE_POPULAR_SERVICESE = (By.CSS_SELECTOR, '#main-page>div._container>section:nth-child(6)>div>div>h1')
-    LINK_TO_ALL_SERVICES_BLOCK_POPULAR_SERVICES = (By.CSS_SELECTOR, '#main-page>div._container>section:nth-child(6)>div>div>a')
+    BLOCK_POPULAR_SERVICES = (By.CSS_SELECTOR, '#popular-services')
+    TITLE_POPULAR_SERVICESES = (By.CSS_SELECTOR, 'popular-services>h2')
+    LINK_TO_ALL_SERVICES_BLOCK_POPULAR_SERVICES = (By.CSS_SELECTOR, 'popular-services>a')
     BLOCK_SUBSCRIBE = (By.CSS_SELECTOR, 'section.subscribe-container')
     TEXT_INPUT_SUBSCRIBE = (By.CSS_SELECTOR, '.subscribe__input>input')
     BUTTON_SUBSCRIBE = (By.CSS_SELECTOR, 'button.subscribe__button')
