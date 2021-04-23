@@ -14,6 +14,7 @@ def test_check_all_link_in_header_top_menu(browser, index, messages):
 
 
 @pytest.mark.smoke
+@pytest.mark.test
 @pytest.mark.parametrize('index, messages', MainPageLocators.LINK_LIST_DROPDOWN_HEADER)
 # проверка всех ссылок в выпадающем меню покупателям в хедер
 def test_check_all_link_in_customers_dropdown_menu(browser, index, messages):
@@ -310,7 +311,6 @@ def test_should_be_block_social_networks_in_footer(browser):
     assert page.is_element_present(*MainPageLocators.FOOTER_SOCIAL_NETWORK_BLOCK)
 
 
-@pytest.mark.test
 # проверка наличия иконки facebook в футер
 def test_should_be_facebook_icon_in_footer(browser):
     page = MainPage(browser, MainPageLocators.MAIN_PAGE_URL)
@@ -318,14 +318,13 @@ def test_should_be_facebook_icon_in_footer(browser):
     page.is_element_present(*MainPageLocators.FOOTER_FACEBOOK_ICON)
 
 
-@pytest.mark.test
 # проверка наличия иконки youtube в футер
 def test_should_be_youtube_icon_in_footer(browser):
     page = MainPage(browser, MainPageLocators.MAIN_PAGE_URL)
     page.open()
     page.is_element_present(*MainPageLocators.FOOTER_YOUTUBE_ICON)
 
-@pytest.mark.test
+
 # проверка наличия иконки instagram в футер
 def test_should_be_insta_icon_in_footer(browser):
     page = MainPage(browser, MainPageLocators.MAIN_PAGE_URL)
@@ -400,7 +399,6 @@ def test_should_be_block_repair_agregates_in_footer_nav(browser):
 
 
 @pytest.mark.smoke
-@pytest.mark.test
 # проверка наличия блока копирайт
 def test_should_be_block_copywrite_in_footer(browser):
     page = MainPage(browser, MainPageLocators.MAIN_PAGE_URL)
