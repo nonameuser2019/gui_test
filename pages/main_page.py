@@ -37,7 +37,7 @@ class MainPage(BasePage):
 
 
     def should_be_title_in_block_popular_services(self, browser:webdriver.Chrome):
-        assert self.browser.find_element(*MainPageLocators.TITLE_POPULAR_SERVICESE).text == 'ПОПУЛЯРНЫЕ УСЛУГИ',\
+        assert self.browser.find_element(*MainPageLocators.TITLE_POPULAR_SERVICESES).text == 'ПОПУЛЯРНЫЕ УСЛУГИ',\
         'Wrong title in block Popular services'
 
 
