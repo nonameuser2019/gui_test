@@ -84,6 +84,11 @@ class DiagnosticPageLocator():
     DIAGNOSTIC_BUTTON_DATE = (By.CSS_SELECTOR, 'div.diagnostic__button-container>div.button__primary_default')
 
 
+class ProductPageLocator:
+    BUTTON_BUY = (By.CSS_SELECTOR, 'div.buy-block__custom-button>button.card__button')
+    BUTTON_BUY_TEXT = (By.CSS_SELECTOR, 'div.buy-block__custom-button>button.card__button.span')
+
+
 
 
 

@@ -13,6 +13,7 @@ class DiagnosticsPage(BasePage):
     # дописать когда появяться id в полях
     def change_system(self, browser: webdriver.Chrome):
         # tab system and component
+        pass
 
 
 

@@ -324,10 +324,7 @@ def test_should_be_youtube_icon_in_footer(browser):
     page.open()
     page.is_element_present(*MainPageLocators.FOOTER_YOUTUBE_ICON)
 
-<<<<<<< HEAD
 
-=======
->>>>>>> 236cb1b98e7105e5e6a208b3a7e1c6eebaffb29a
 # проверка наличия иконки instagram в футер
 def test_should_be_insta_icon_in_footer(browser):
     page = MainPage(browser, MainPageLocators.MAIN_PAGE_URL)
