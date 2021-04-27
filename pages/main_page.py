@@ -1,8 +1,6 @@
-from .base_page import BasePage
+from pages.base_page import BasePage
 from .locators import MainPageLocators
 from selenium import webdriver
-import pytest
-from selenium.webdriver.common.by import By
 
 
 class MainPage(BasePage):

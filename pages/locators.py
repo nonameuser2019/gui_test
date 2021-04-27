@@ -71,7 +71,6 @@ class FormOfLoggin():
 
 
 class DiagnosticPageLocator():
-
     TITLE_DIAGNOSTIC_TAB = (By.CSS_SELECTOR, '.tabs-block_type_diagnostic>div.modal-header-section>h3')
     CHOICE_SYSTEM_LIST = (By.CSS_SELECTOR, 'div.node>div.node__content>div.node__content-item:nth-child(1)')
     CHOICE_SYSTEM_ITEM = (By.CSS_SELECTOR, 'span[data-value="system1"]')
@@ -86,7 +85,17 @@ class DiagnosticPageLocator():
 
 class ProductPageLocator:
     BUTTON_BUY = (By.CSS_SELECTOR, 'div.buy-block__custom-button>button.card__button')
-    BUTTON_BUY_TEXT = (By.CSS_SELECTOR, 'div.buy-block__custom-button>button.card__button.span')
+    PRODUCT_PRICE = (By.CSS_SELECTOR, 'div.buy-block__block.buy-block__block_card>div.buy-block__price.price>span.price__quantity')
+
+
+class BasketPageLocator:
+    EMPTY_BUTTON_TEST = (By.CSS_SELECTOR, 'div.empty-cart-container.element-container-show>div>span')
+    PRICE_ITEM = (By.CSS_SELECTOR, '.item-cart__price')
+    COUNT_ITEM = (By.CSS_SELECTOR, '.item-cart__counter.counter>div')
+    DELETE_ITEM_BTN = (By.CSS_SELECTOR, '#cart-delete-product')
+
+
+
 
 
 

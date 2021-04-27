@@ -1,12 +1,6 @@
-from .base_page import BasePage
-from .locators import MainPageLocators, DiagnosticPageLocator
+from pages.base_page import BasePage
 from selenium import webdriver
-import pytest
-from selenium.webdriver.common.by import By
-from datetime import date
-import time
-from selenium.webdriver.support import expected_conditions as EC
-from selenium.webdriver.support.ui import WebDriverWait
+
 
 class DiagnosticsPage(BasePage):
     # тест жестко завязан на конкретную систему, когда бэк будет готов убрать привязку

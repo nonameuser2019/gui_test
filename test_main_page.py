@@ -1,7 +1,7 @@
 from selenium import webdriver
 import pytest
-from .pages.main_page import MainPage
-from .pages.locators import MainPageLocators
+from .pages1.main_page import MainPage
+from .pages1.locators import MainPageLocators
 import time
 
 

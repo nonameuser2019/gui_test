@@ -1,7 +1,7 @@
 import pytest
-from .pages.main_page import MainPage
-from .pages.diagnostics_page import DiagnosticsPage
-from .pages.locators import MainPageLocators, DiagnosticPageLocator
+from .pages1.main_page import MainPage
+from .pages1.diagnostics_page import DiagnosticsPage
+from .pages1.locators import MainPageLocators, DiagnosticPageLocator
 
 
 # проверка что при нажатии на кнопку записаться на регистрацию открывается окно с регистарцией
