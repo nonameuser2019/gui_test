@@ -1,7 +1,7 @@
 import pytest
-from .pages.main_page import MainPage
-from .pages.product_page import ProductPage
-from .pages.locators import MainPageLocators
+from pages.main_page import MainPage
+from pages.product_page import ProductPage
+from pages.locators import MainPageLocators
 from selenium import webdriver
 
 

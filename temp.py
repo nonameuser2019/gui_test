@@ -4,19 +4,11 @@ import pytest
 from selenium.webdriver.common.by import By
 from selenium.common.exceptions import NoSuchElementException
 from datetime import date
+from pages.basket_page import *
+import re
 
-# import time
-# def temp():
-#     browser = webdriver.Chrome()
-#     browser.set_window_size(1920, 1080)
-#     browser.implicitly_wait(5)
-#     browser.get('https://qa.platform.masterservice.company/')
-#     button = browser.find_element(By.CSS_SELECTOR, 'button.subscribe__button__')
-#     print(button)
-#
-# temp()
-def is_even(number):
-    return number % 2 == 0
+wrong_price = '6 950 грн.'
 
-num = 5
-print(is_even(num))
+correct_price = ''.join(re.findall(r'[\d+]', wrong_price))
+print(correct_price)
+

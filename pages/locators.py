@@ -89,10 +89,17 @@ class ProductPageLocator:
 
 
 class BasketPageLocator:
+    CHECKOUT_URL = 'https://qa.platform.masterservice.company/checkout-order'
     EMPTY_BUTTON_TEST = (By.CSS_SELECTOR, 'div.empty-cart-container.element-container-show>div>span')
     PRICE_ITEM = (By.CSS_SELECTOR, '.item-cart__price')
-    COUNT_ITEM = (By.CSS_SELECTOR, '.item-cart__counter.counter>div')
+    COUNT_ITEM_BTN = (By.CSS_SELECTOR, '#cart-edit-quantity-plus')
+    REDUCE_ITEM_BTN = (By.CSS_SELECTOR, '#cart-edit-quantity-minus')
     DELETE_ITEM_BTN = (By.CSS_SELECTOR, '#cart-delete-product')
+    CHECK_OUT_ORDER_BTN = (By.CSS_SELECTOR, '#checkout-order-inside-cart')
+    PRODUCT_LIST_BASKET = (By.CSS_SELECTOR, 'div.tab-content.cart__content>div>li')
+    PRODUCT_COUNT_VALUE = (By.CSS_SELECTOR, '.item-cart__counter.counter>div')
+    ORDER_TOTAL = (By.CSS_SELECTOR, '.total-cart__price-amount')
+    EXCEL_BTN = (By.CSS_SELECTOR, '#download-excel')
 
 
 
