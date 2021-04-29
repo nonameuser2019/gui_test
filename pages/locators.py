@@ -102,6 +102,24 @@ class BasketPageLocator:
     EXCEL_BTN = (By.CSS_SELECTOR, '#download-excel')
 
 
+class CheckOutLocators:
+    CHECKOUT_ORDER_CONFIRM = (By.CSS_SELECTOR, '#checkout-order-confirm')
+    PRODUCT_SEARCH_FIELD = (By.CSS_SELECTOR, 'checkout-order-search-products')
+    ADD_COUNT_ITEM = (By.CSS_SELECTOR, '.counter__plus')
+    REDUCE_COUNT_ITEM = (By.CSS_SELECTOR, '.counter__minus')
+    DELETE_ITEM_BTN = (By.CSS_SELECTOR, 'i.ms-icon-trash')
+    NAME_FIELD = (By.CSS_SELECTOR, 'input[placeholder="Имя Фамилия"]')
+    PHONE_FIELD = (By.CSS_SELECTOR, 'input[placeholder="Телефон"]')
+    EMAIL_FIELD = (By.CSS_SELECTOR, 'input[name="email"]')
+    RADIO_BTN_IAM = (By.CSS_SELECTOR, 'input#i-am')
+    RADIO_BTN_OTHER_PEOPLE = (By.CSS_SELECTOR, 'input#another-man')
+    FIELD_YOUR_NAME = (By.CSS_SELECTOR, 'input[placeholder="Ваше имя"]')
+    FIELD_YOUR_PHONE_NUMBER = (By.CSS_SELECTOR, 'div.new-client__form>input[placeholder="Телефон"]')
+    CHECKBOX_TERMS = (By.CSS_SELECTOR, '#termsOfService')
+
+
+
+
 
 
 

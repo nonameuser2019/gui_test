@@ -5,8 +5,8 @@ from selenium import webdriver
 
 class ProductPage(BasePage):
 
-    def add_product_to_card(self, browser: webdriver.Chrome):
-        button_add = browser.find_element(*ProductPageLocator.BUTTON_BUY)
+    def add_product_to_card(self):
+        button_add = self.browser.find_element(*ProductPageLocator.BUTTON_BUY)
         condition = button_add.get_attribute('disabled')
         if condition:
             print(f'Product is not avalible')
