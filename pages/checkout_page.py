@@ -7,9 +7,10 @@ import re
 
 class CheckOut(ProductPage):
 
-    def setup_checkout(self, browser: webdriver.Chrome):
+    def setup_checkout(self):
         self.add_product_to_card()
-        check_out_btn = browser.find_element(*BasketPageLocator.CHECK_OUT_ORDER_BTN)
+        self.open_basket()
+        check_out_btn = self.browser.find_element(*BasketPageLocator.CHECK_OUT_ORDER_BTN)
         check_out_btn.click()
 
     def checkout_continue(self):
@@ -45,3 +46,7 @@ class CheckOut(ProductPage):
     def fill_email(self, email):
         email_field = self.browser.find_element(*CheckOutLocators.EMAIL_FIELD)
         email_field.send_keys(email)
+
+    def get_active_tab_name(self):
+        active_name = self.browser.find_element(*CheckOutLocators.ACTIVE_TAB_TITLE).text
+        return active_name.lower()

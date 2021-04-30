@@ -116,6 +116,7 @@ class CheckOutLocators:
     FIELD_YOUR_NAME = (By.CSS_SELECTOR, 'input[placeholder="Ваше имя"]')
     FIELD_YOUR_PHONE_NUMBER = (By.CSS_SELECTOR, 'div.new-client__form>input[placeholder="Телефон"]')
     CHECKBOX_TERMS = (By.CSS_SELECTOR, '#termsOfService')
+    ACTIVE_TAB_TITLE = (By.CSS_SELECTOR, '.tab__title.tab__title_active')
 
 
 
