@@ -111,11 +111,11 @@ class CheckOutLocators:
     NAME_FIELD = (By.CSS_SELECTOR, 'input[placeholder="Имя Фамилия"]')
     PHONE_FIELD = (By.CSS_SELECTOR, 'input[placeholder="Телефон"]')
     EMAIL_FIELD = (By.CSS_SELECTOR, 'input[name="email"]')
-    RADIO_BTN_IAM = (By.CSS_SELECTOR, 'input#i-am')
-    RADIO_BTN_OTHER_PEOPLE = (By.CSS_SELECTOR, 'input#another-man')
+    RADIO_BTN_IAM = (By.CSS_SELECTOR, '.new-client__radio-group>label:nth-child(1)')
+    RADIO_BTN_OTHER_PEOPLE = (By.CSS_SELECTOR, '.new-client__radio-group>label:nth-child(2)')
     FIELD_YOUR_NAME = (By.CSS_SELECTOR, 'input[placeholder="Ваше имя"]')
     FIELD_YOUR_PHONE_NUMBER = (By.CSS_SELECTOR, 'div.new-client__form>input[placeholder="Телефон"]')
-    CHECKBOX_TERMS = (By.CSS_SELECTOR, '#termsOfService')
+    CHECKBOX_TERMS = (By.CSS_SELECTOR, 'label.checkbox__sub-label')
     ACTIVE_TAB_TITLE = (By.CSS_SELECTOR, '.tab__title.tab__title_active')
 
 

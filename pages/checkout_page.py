@@ -1,9 +1,10 @@
 from pages.base_page import BasePage
 from pages.product_page import ProductPage
 from pages.locators import BasketPageLocator, ProductPageLocator, CheckOutLocators
+from selenium.webdriver.common.action_chains import ActionChains
 from selenium import webdriver
 import re
-
+import time
 
 class CheckOut(ProductPage):
 
@@ -47,6 +48,32 @@ class CheckOut(ProductPage):
         email_field = self.browser.find_element(*CheckOutLocators.EMAIL_FIELD)
         email_field.send_keys(email)
 
+    def change_consignee_i_am(self):
+        i_am_radio_btn = self.browser.find_element(*CheckOutLocators.RADIO_BTN_IAM)
+        i_am_radio_btn.click()
+
+    def change_consignee_other_person(self):
+        other_person_redio_btn = self.browser.find_element(*CheckOutLocators.RADIO_BTN_OTHER_PEOPLE)
+        other_person_redio_btn.click()
+
     def get_active_tab_name(self):
         active_name = self.browser.find_element(*CheckOutLocators.ACTIVE_TAB_TITLE).text
         return active_name.lower()
+
+    def user_agreement(self):
+        user_agreement_check_box = self.browser.find_element(*CheckOutLocators.CHECKBOX_TERMS)
+        user_agreement_check_box.click()
+
+    def click_on_area(self, how, what):
+        click_element = self.browser.find_element(how, what)
+        elem_location = click_element.location
+        x = elem_location['x'] + 3
+        y = elem_location['y'] + 3
+        actions = ActionChains(self.browser)
+        actions.move_by_offset(x, y)
+        time.sleep(1)
+        actions.click()
+
+
+
+
